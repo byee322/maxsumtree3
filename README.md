@@ -13,7 +13,7 @@
 * Run ```docker -v``` in your terminal to ensure you have docker installed
 * Clone the repository in your working directory
   * ```git clone https://github.com/byee322/maxsumtreeapp3.git```
-* Go into folder```cd maxsumtree```
+* Go into folder```cd maxsumtree3```
 * Run ```docker-compose run app rake db:create db:migrate```
 * Run ```docker-compose up --build```
 
