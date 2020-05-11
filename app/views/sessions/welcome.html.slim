@@ -1,0 +1,10 @@
+.header
+  h1 Welcome!
+  .button-container
+    = button_to "Login", '/login', method: :get, class: "button-input"
+    = button_to "Sign Up", '/users/new', method: :get, class: "button-input"
+
+- if logged_in?
+  .welcome-login
+    = react_component("Hello", { name: current_user.username })
+  = react_component("MaxSumTree", {}, { class: "app-body", data: { level: 0 } })

@@ -1,0 +1,12 @@
+<%= button_to "Home", '/welcome', method: :get%>
+
+<h1>Login</h1>
+   <%= form_tag '/login' do %>
+   <%= label_tag :username%>
+   <%= email_field_tag :username, nil, placeholder: 'email@example.com' %>
+   <br>
+   <%= label_tag :password%>
+   <%= password_field_tag :password %>
+   <br>
+   <%= submit_tag "Login"%>
+<%end%>

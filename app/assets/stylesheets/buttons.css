@@ -1,0 +1,34 @@
+.button-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 10% 10%;
+  align-items: center;
+}
+
+.button-container input {
+  width: 100%;
+}
+
+.button-input {
+  position: relative;
+  font-weight: 900;
+  padding: 1.25rem 2rem;
+  color: #000;
+  border: 1px solid black;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: #000;
+  background: #FFF;
+  text-transform: uppercase;
+  transition: all 0.5s cubic-bezier(0.65,-0.25,0.25,1.95);
+}
+
+.button-input:hover {
+  letter-spacing: 0.125rem;
+}
+
+.disabled {
+  opacity: 0.5;
+}

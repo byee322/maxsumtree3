@@ -1,0 +1,10 @@
+<%= button_to "Home", '/welcome', method: :get%>
+
+<h1>Sign Up</h1>
+<%= form_for @user do |f|%>
+  <%= f.label :username%><br>
+  <%= f.email_field :username, placeholder: 'email@example.com' %><br>
+  <%= f.label :password%><br>
+  <%= f.password_field :password, size: 10 %><br>
+  <%= f.submit %>
+<%end%>
