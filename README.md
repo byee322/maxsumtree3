@@ -19,7 +19,7 @@
 
 
 ## You're all set to go!
-> Please visit localhost:3000 in your browser
+> Please visit localhost:3000/welcome in your browser
 
 ## Run the tests
 ```docker-compose run app rspec```
