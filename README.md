@@ -14,9 +14,8 @@
 * Clone the repository in your working directory
   * ```git clone https://github.com/byee322/maxsumtreeapp3.git```
 * Go into folder```cd maxsumtree3```
-* Run ```docker-compose run app rake db:create db:migrate```
 * Run ```docker-compose up --build```
-
+* Run ```docker-compose run app rake db:create db:migrate```
 
 ## You're all set to go!
 > Please visit localhost:3000/welcome in your browser
