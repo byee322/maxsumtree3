@@ -15,10 +15,8 @@
   * ```git clone https://github.com/byee322/maxsumtreeapp3.git```
 * Go into folder```cd maxsumtree3```
 * Run ```docker-compose up --build```
-* Run ```docker-compose run app rake db:create db:migrate```
-
-## You're all set to go!
-> Please visit localhost:3000/welcome in your browser
+* In a seperate terminal ```docker-compose run app rake db:create db:migrate```
+* Please visit ```localhost:3000``` in your browser and find that max tree!
 
 ## Run the tests
 ```docker-compose run app rspec```
