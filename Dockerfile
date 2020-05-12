@@ -19,13 +19,11 @@ RUN echo '#!/usr/bin/env bash' > $CONTAINER_INIT ; chmod +x $CONTAINER_INIT
 
 RUN echo 'service postgresql start' >> $CONTAINER_INIT
 
-RUN mkdir /app
-WORKDIR /app
+RUN mkdir /maxsumtree3
+WORKDIR /maxsumtree3
 
-EXPOSE 3000
-
-COPY Gemfile .
-COPY Gemfile.lock .
+COPY Gemfile /maxsumtree3/Gemfile
+COPY Gemfile.lock /maxsumtree3/Gemfile.lock
 COPY . /maxsumtree3
 COPY package.json .
 COPY yarn.lock .
@@ -34,8 +32,10 @@ RUN gem install bundler:2.1.2
 RUN bundle install
 RUN yarn upgrade
 RUN yarn install --check-files
+RUN bundle install
+
+EXPOSE 3000
 
 RUN echo 'rake db:create db:migrate'
 
 CMD ["rails", "server", "-b", "0.0.0.0"]
-
