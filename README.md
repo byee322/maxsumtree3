@@ -20,3 +20,12 @@
 
 ## Run the tests
 ```docker-compose run app rspec```
+
+### Improvements
+
+* I thought to solve the lots of users problems, I'd give everyone the script to have the computing on the client side and not overloading the server.
+* A backend service job to process the requests could also work if the tree's got to be much larger.
+* Adding a Tree table to the DB so a user could save their saved trees or in progress trees
+* Feature tests - ensure proper output for different tree inputs.
+* Component tests - props type checking, classname checking, max sum output checking
+
