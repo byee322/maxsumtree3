@@ -36,6 +36,4 @@ RUN bundle install
 
 EXPOSE 3000
 
-RUN echo 'rake db:create db:migrate'
-
 CMD ["rails", "server", "-b", "0.0.0.0"]
