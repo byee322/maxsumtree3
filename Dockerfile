@@ -26,15 +26,16 @@ EXPOSE 3000
 
 COPY Gemfile .
 COPY Gemfile.lock .
-RUN gem install bundler:2.1.2
-RUN bundle install
-
+COPY . /maxsumtree3
 COPY package.json .
 COPY yarn.lock .
+
+RUN gem install bundler:2.1.2
+RUN bundle install
 RUN yarn upgrade
 RUN yarn install --check-files
+
 RUN echo 'rake db:create db:migrate'
 
-CMD ["yarn", "run", "start"]
 CMD ["rails", "server", "-b", "0.0.0.0"]
 
